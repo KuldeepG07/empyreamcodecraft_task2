@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../CSS/project.css">
+</head>
+
+<body>
+    <center>
+        <h2>: Some Sights of Our "GYM PROJECT" :</h2>
+    </center>
+    <div class="gymgallery">
+        <img src="../images/gym1.png" alt="1">
+        <img src="../images/gym2.png" alt="2">
+        <img src="../images/gym3.png" alt="3">
+        <img src="../images/gym4.png" alt="4">
+        <img src="../images/gym5.png" alt="5">
+        <img src="../images/gym6.png" alt="6">
+        <img src="../images/gym7.png" alt="7">
+        <img src="../images/gym8.png" alt="8">
+        <img src="../images/gym9.png" alt="9">
+        <img src="../images/gym10.png" alt="10">
+    </div>
+
+    <div class="pagination">
+        <button class="page-btn1 active">1</button>
+        <button class="page-btn1">2</button>
+        <button class="page-btn1">3</button>
+        <button class="page-btn1">4</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gymgallery = document.querySelector('.gymgallery');
+            const gymbtn = document.querySelectorAll('.page-btn1');
+            const imagesPerPage1 = 3;
+
+            function showPage(pageNumber) {
+                const startIndex = (pageNumber - 1) * imagesPerPage1;
+                const endIndex = startIndex + imagesPerPage1;
+                const images = gymgallery.querySelectorAll('img');
+
+                images.forEach((image, index) => {
+                    if (index >= startIndex && index < endIndex) {
+                        image.style.display = 'block';
+                    } else {
+                        image.style.display = 'none';
+                    }
+                });
+            }
+
+            gymbtn.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    gymbtn.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    showPage(index + 1);
+                });
+            });
+
+            showPage(1);
+        });
+    </script>
+
+    <br>
+    <center>
+        <h2>: Our Team :</h2>
+    </center>
+    <div class="contact-container">
+        <div class="contact-card">
+            <img src="../images/me.jpg" alt="Person 1">
+            <h3>Kuldeep Gabani</h3>
+            <ul class="social">
+                <li><a href="https://www.instagram.com/kuldeep_gabani07/" target="_blank"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/kuldeep-gabani-29819a26a/" target="_blank"><i
+                            class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                <li><a href="mailto: k4gabani@gmail.com" target="_blank"><i class="fa fa-envelope"
+                            aria-hidden="true"></i></a></li>
+            </ul>
+
+        </div>
+        <div class="contact-card">
+            <img src="../images/mahek.jpg" alt="Person 2">
+            <h3>Mahek Garala</h3>
+            <ul class="social">
+                <li><a href="https://instagram.com/_mahek_101?igshid=ZDdkNTZiNTM=" target="_blank"><i
+                            class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/mahek-garala-179911261" target="_blank"><i
+                            class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                <li><a href="mailto: mahekgarala808@gmail.com" target="_blank"><i class="fa fa-envelope"
+                            aria-hidden="true"></i></a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="contact-card">
+            <img src="../images/yash.jpg" alt="Person 3">
+            <h3>Yash Gabani</h3>
+            <ul class="social">
+                <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <center>
+        <h2>: Some Sights of My "QUIZ PROJECT" :</h2>
+    </center>
+    <br>
+    <div class="quizgallery">
+        <img src="../images/quiz1.png" alt="1">
+        <img src="../images/quiz2.png" alt="2">
+        <img src="../images/quiz3.png" alt="3">
+        <img src="../images/quiz4.png" alt="4">
+        <img src="../images/quiz5.png" alt="5">
+    </div>
+
+    <div class="pagination">
+        <button class="page-btn2 active">1</button>
+        <button class="page-btn2">2</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const quizgallery = document.querySelector('.quizgallery');
+            const quizbtn = document.querySelectorAll('.page-btn2');
+            const imagesPerPage2 = 3;
+
+            function showPage(pageNumber) {
+                const startIndex = (pageNumber - 1) * imagesPerPage2;
+                const endIndex = startIndex + imagesPerPage2;
+                const images = quizgallery.querySelectorAll('img');
+
+                images.forEach((image, index) => {
+                    if (index >= startIndex && index < endIndex) {
+                        image.style.display = 'block';
+                    } else {
+                        image.style.display = 'none';
+                    }
+                });
+            }
+
+            quizbtn.forEach((button, index) => {
+                button.addEventListener('click', () => {
+                    quizbtn.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    showPage(index + 1);
+                });
+            });
+            showPage(1);
+        })
+    </script>
+    <div class="bck">
+        <center><a id="back" href="../HTML/qualification.html">Back</a></center>
+    </div>
+</body>
+
+</html>

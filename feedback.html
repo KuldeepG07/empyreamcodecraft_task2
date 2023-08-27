@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <script src="../JS/navigation.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../CSS/feedback.css">
+</head>
+
+<body>
+    <div class="navigation" id="myTopnav">
+        <ul>
+            <a href="index.html"><strong>Home</strong></a>
+            <a href="qualification.html"><strong>Qualification</strong></a>
+            <a href="achivement.html"><strong>Achivements</strong></a>
+            <!-- <a href="gallery.html"><strong>Gallery</strong></a> -->
+            <a href="contact.html"><strong>Contact Me</strong></a>
+            <a href="feedback.html" class="active"><strong>Feedback</strong></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </ul>
+    </div>
+    </br><br>
+    <h1>: Feedback Form :</h1>
+
+    <section class="container">
+        <div class="feedimg" id="feedimage">
+            <img src="../images/feed.jpg">
+        </div>
+
+        <div class="form" id="feedform">
+            <form action="thanks.html" method="get" style="color: yellowgreen;" name="feedback"
+                onsubmit="return validateform()">
+                <fieldset id="f1">
+                    <legend style="text-align: left; color: yellow;">: Personalia :</legend>
+
+                    <label for="fname">First Name :</label>
+                    <input type="text" id="fname" name="fname" autofocus placeholder="Enter your first name"><br><br>
+
+                    <label for="lname">Last Name :</label>
+                    <input type="text" id="lname" name="lname" placeholder="Enter your last name"><br><br>
+
+                    <label for="dob">Birth date :</label>
+                    <input type="date" style="color: black" id="dob" name="dob"><br><br>
+
+                    <label for="email">Enter your Email :</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your mail">
+                </fieldset>
+
+                <fieldset id="f2">
+                    <legend style="text-align: left; color: yellow;"> Feedback :</legend>
+                    <textarea placeholder="Enter Your feedback here" id="feedback"
+                        style="height: 80px; width: 100%;"></textarea>
+
+                    <p style="text-align: left;" for="choice">How's Your Experience :-
+                        <select name="choice" id="choice">
+                            <option value="none" selected disabled hidden>Select an option</option>
+                            <option value="Best">Best</option>
+                            <option value="Good">Good</option>
+                            <option value="Moderate">Moderate</option>
+                            <option value="Poor">poor</option>
+                        </select>
+                    </p>
+                    Rate This Portfolio in Below Star-rating System :
+                    <div class="rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5"></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4"></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3"></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2"></label>
+                        <input type="radio" id="star1" checked="true" name="rating" value="1">
+                        <label for="star1"></label>
+                    </div>
+                </fieldset>
+                <div class="id">
+                    <input type="submit" value="Submit" id="sub">
+                    <input type="reset" value="Reset" id="res">
+                </div>
+            </form>
+
+        </div>
+    </section>
+    <div class="footer">
+        <div class="foot1">
+            <p><a id="footlogo" href="index.html"><img src="../images/mainlogo3.png" style="border-radius: 5px; border: 2px solid rgb(36, 35, 35);" height="95px" width="175px"></a></p>
+            <p id="copyright">&#169 2023 CE031 KG-Creative All Rights Reserved</p>
+        </div>
+        <div class="foot2">
+            <p id="directlinks">Go to Direct Tabs</p>
+            <ul>
+                <li><a href="qualification.html">Qualification</a></li>
+                <li><a href="achivement.html">Achievements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="foot3">
+            <p id="para">About This Website</p><br>
+            <p id="info">I created this website in the year-2023 when I was in the Second semester of my B.Tech-CE.This
+                is my first Portfolio Website  that I have created using HTML, CSS, Javascript and,  some Bootstrap. </p>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="top" title="Go to top">Back To Top</button>
+    <script src="../JS/top.js"></script>
+    <script src="../JS/feedback.js"></script>
+</body>
+
+</html>

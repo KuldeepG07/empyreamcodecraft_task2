@@ -1,0 +1,137 @@
+/* Projects */
+
+body {
+    background-image: url('../images/backg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* Gym */
+h2 {
+    color: yellow;
+    text-decoration: overline 1px;
+    letter-spacing: 1px;
+}
+
+/* Pagination */
+.gymgallery, .quizgallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gymgallery img , .quizgallery img {
+    width: 450px;
+    height: 250px;
+    margin: 10px;
+}
+
+@media (max-width:600px) {
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* Styles for the pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 7px 12px;
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s;
+    font-size: 20px;
+
+}
+
+.pagination button.active {
+    background-color: yellowgreen;
+    color: black;
+    font-size: 20px;
+}
+
+.pagination button:hover:not(.active) {
+    background-color: rgb(206, 241, 135);
+}
+
+/* Team */
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+}
+
+.contact-card {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 3px 6px 12px #888888;
+    color: black;
+    background: rgb(204, 204, 112);
+}
+
+.contact-card img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.social {
+    padding: 0;
+    margin: 0 0 20px 0;
+    list-style: none;
+}
+
+.social li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social li a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    font-size: 200%;
+    color: black;
+}
+
+.social li a:hover {
+    color: #3b3b35f7;
+    font-size: 225%;
+}
+
+.bck {
+    margin: 25px;
+}
+
+#back {
+    text-decoration: none;
+    border: 2px solid yellowgreen;
+    font-size: 20px;
+    background-color: yellowgreen;
+    color: black;
+    padding: 5px 15px;
+    font-weight: 500;
+}

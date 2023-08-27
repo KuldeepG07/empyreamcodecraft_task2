@@ -1,0 +1,22 @@
+body {
+    background-image: url('../images/backg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a:link,
+a:visited {
+    background-color: yellow;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 25px;
+
+}
+
+a:hover,
+a:active {
+    background-color: yellowgreen;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualification</title>
+    <script src="../JS/navigation.js"></script>
+    <link rel="icon" type="image/x-icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../CSS/qualification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navigation" id="myTopnav">
+        <ul>
+            <a href="index.html"><strong>Home</strong></a>
+            <a href="qualification.html" class="active"><strong>Qualification</strong></a>
+            <a href="achivement.html"><strong>Achievements</strong></a>
+            <!-- <a href="gallery.html"><strong>Gallery</strong></a> -->
+            <a href="contact.html"><strong>Contact Me</strong></a>
+            <a href="feedback.html"><strong>Feedback</strong></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </ul>
+    </div>
+    <br><br>
+
+    <h1 style="color: yellow; text-align: center;">: Education Qualification :</h1><br><br>
+    <div class="container">
+        <div class="wrapper">
+            <a href="#">
+                <img src="../images/me2.jpg" alt="">
+            </a>
+            <div class="title">
+                Kuldeep Gabani
+            </div>
+            <div class="place">
+                DDIT, Nadiad
+            </div>
+        </div>
+        <div class="content">
+            <p>
+                Computer Engineering Student <br> Enthusiastic Learner <br> Developer
+            </p>
+            <div class="buttons">
+                <div class="btn">
+                    <button> <a href="../HTML/project.html">Recent Project</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const img = document.querySelector("img");
+        const icons = document.querySelector(".icons");
+        img.onclick = function () {
+            this.classList.toggle("active");
+            icons.classList.toggle("active");
+        }
+    </script>
+    <br>
+    <section class="tab">
+        <table style="color: black; width: 60%; font-size:large;" class="center">
+            <tr>
+                <th>No.</th>
+                <th>Standard / Degree</th>
+                <th>School / University</th>
+                <th>Percentage</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>10</td>
+                <td>Shree Swaminarayan Gurukul Vidyalaya</td>
+                <td>90.11%</td>
+                <td>2019-20</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>12 - Sci.</td>
+                <td>P.P.Savani International School</td>
+                <td>88.61%</td>
+                <td>2021-22</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>GUJCET</td>
+                <td>P.P.Savani International School</td>
+                <td>97.4 PR</td>
+                <td>2021-22</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>CE-B.Tech</td>
+                <td>Dharmsingh Desai University (Nadiad)</td>
+                <td>Pursuing</td>
+                <td>2022-26</td>
+            </tr>
+        </table>
+    </section>
+    <br>
+    <p style="text-align: center; color: yellow; font-size: larger;">-: Results :-</p>
+
+    <div class="gallery">
+        <img src="../images/10result.png" alt="Certificate 1">
+        <img src="../images/12result.png" alt="Certificate 2">
+        <img src="../images/gujcet.png" alt="Certificate 3">
+    </div>
+
+    <div class="pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <!-- <button class="page-btn">3</button> -->
+    </div>
+
+    <script>
+        const gallery = document.querySelector('.gallery');
+        const pageButtons = document.querySelectorAll('.page-btn');
+        const imagesPerPage = 2;
+
+        function showPage(pageNumber) {
+            const startIndex = (pageNumber - 1) * imagesPerPage;
+            const endIndex = startIndex + imagesPerPage;
+            const images = gallery.querySelectorAll('img');
+
+            images.forEach((image, index) => {
+                if (index >= startIndex && index < endIndex) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            });
+        }
+
+        pageButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                pageButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                showPage(index + 1);
+            });
+        });
+        showPage(1);  // page by default
+    </script>
+
+    <br>
+    <div class="footer">
+        <div class="foot1">
+            <p><a id="footlogo" href="index.html"><img src="../images/mainlogo3.png"
+                        style="border-radius: 5px; border: 2px solid rgb(36, 35, 35);" height="95px" width="175px"></a>
+            </p>
+            <p id="copyright">&#169 2023 CE031 KG-Creative All Rights Reserved</p>
+        </div>
+        <div class="foot2">
+            <p id="directlinks">Go to Direct Tabs</p>
+            <ul>
+                <li><a href="qualification.html">Qualification</a></li>
+                <li><a href="achivement.html">Achievements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="foot3">
+            <p id="para">About This Website</p><br>
+            <p id="info">I created this website in the year-2023 when I was in the Second semester of my B.Tech-CE.This
+                is my first Portfolio Website that I have created using HTML, CSS, Javascript and, some Bootstrap. </p>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="top" title="Go to top">Back To Top</button>
+    <script src="../JS/top.js"></script>
+</body>
+
+</html>
